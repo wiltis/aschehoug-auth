@@ -11,7 +11,7 @@ const { user, isAuthenticated, isLoading } = useAuth0()
 		<div class="header-content">
 			<img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="64" height="64" />
 			<span v-if="isAuthenticated && !isLoading">Hei, {{ user?.name }}!</span>
-			<Login v-if="!isAuthenticated && !isLoading" />
+			<span v-if="!isAuthenticated">Velkommen! Logg inn for å komme videre</span>
 			<Logout v-if="isAuthenticated && !isLoading" class="last-item" />
 		</div>
 	</header>

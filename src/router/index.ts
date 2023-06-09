@@ -9,11 +9,6 @@ const createRouter = (app: App): Router => {
 		history: createWebHistory(import.meta.env.BASE_URL),
 		routes: [
 			{
-				path: "/login",
-				name: "login",
-				component: LoginView,
-			},
-			{
 				path: '/',
 				name: 'home',
 				component: HomeView,
