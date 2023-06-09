@@ -10,7 +10,6 @@ const handleChange = (e: Event): void => {
 	videoFile.value = target?.files?.[0]
 
 	if (videoFile.value === undefined) return
-	console.log({ videoFile })
 
 	let reader = new FileReader()
 
@@ -26,9 +25,9 @@ const handleChange = (e: Event): void => {
 
 <template>
 	<div class="video-upload">
-		<input type="file" label="Last opp video" @change="handleChange" accept="video/*" />
+		<input type="file" label="Velg video" @change="handleChange" accept="video/*" />
 		<video class="video-player" :class="{ hidden: !isVideoVisible }" ref="videoPlayer" id="videoPlayer" controls
-			type="video/mp4">
+			type="video/mp4" autoplay>
 		</video>
 	</div>
 </template>
