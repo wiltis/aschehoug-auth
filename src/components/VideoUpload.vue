@@ -20,12 +20,16 @@ const handleChange = (e: Event): void => {
 		isVideoVisible.value = true
 	})
 }
-
 </script>
 
 <template>
 	<div class="video-upload">
-		<input type="file" label="Velg video" @change="handleChange" accept="video/*" />
+		<div class="video-input">
+			<label for="videoInput">
+				Last opp en video for å spille den av
+			</label>
+			<input type="file" name="videoInput" @change="handleChange" accept="video/*" />
+		</div>
 		<video class="video-player" :class="{ hidden: !isVideoVisible }" ref="videoPlayer" id="videoPlayer" controls
 			type="video/mp4" autoplay>
 		</video>
@@ -37,6 +41,12 @@ const handleChange = (e: Event): void => {
 	display: flex;
 	flex-direction: column;
 	gap: 32px;
+}
+
+.video-input {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 }
 
 .video-player {

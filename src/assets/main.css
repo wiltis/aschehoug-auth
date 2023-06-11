@@ -8,3 +8,9 @@ main {
 	margin-right: auto;
 	padding: 0 32px;
 }
+
+@media (max-width: 768px) {
+	.header-content {
+		padding: 0 24px;
+	}
+}

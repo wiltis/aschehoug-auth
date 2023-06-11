@@ -9,6 +9,7 @@ const login = () => auth0.loginWithRedirect()
 
 <template>
 	<div class="container">
+		<span>Logg inn for å komme videre</span>
 		<button class="login-button" @click="login">
 			Logg inn
 		</button>
